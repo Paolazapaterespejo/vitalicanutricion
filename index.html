@@ -84,6 +84,59 @@
       justify-content: flex-end;
     }
 
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(201,75,122,0.18);
+      background: rgba(255,255,255,0.92);
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      color: var(--text);
+      padding: 0;
+      position: relative;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 999px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      position: absolute;
+    }
+
+    .menu-toggle span {
+      position: relative;
+    }
+
+    .menu-toggle::before {
+      transform: translateY(-6px);
+    }
+
+    .menu-toggle::after {
+      transform: translateY(6px);
+    }
+
+    .menu-toggle.is-open span {
+      opacity: 0;
+    }
+
+    .menu-toggle.is-open::before {
+      transform: rotate(45deg);
+    }
+
+    .menu-toggle.is-open::after {
+      transform: rotate(-45deg);
+    }
+
     .nav-links {
       display: flex;
       gap: 22px;
@@ -132,17 +185,25 @@
     }
 
     .lang-toggle {
+      width: 48px;
+      height: 48px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(201,75,122,0.25);
-      background: rgba(255,255,255,0.88);
+      justify-content: center;
+      border: 1px solid rgba(201,75,122,0.20);
+      background: radial-gradient(circle at 30% 30%, #ffffff 0%, #f7f0ea 65%, #eadfd5 100%);
       color: var(--text);
       border-radius: 999px;
-      padding: 10px 16px;
-      font-weight: 700;
       cursor: pointer;
-      box-shadow: var(--shadow-soft);
+      box-shadow: 0 10px 22px rgba(42, 33, 24, 0.10), inset 0 2px 3px rgba(255,255,255,0.8);
+      font-size: 1.35rem;
+      line-height: 1;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(42, 33, 24, 0.12), inset 0 2px 3px rgba(255,255,255,0.85);
     }
 
     .hero {
@@ -620,8 +681,21 @@
       letter-spacing: 0.04em;
     }
 
-    @media (max-width: 960px) {
-      .hero-wrap,
+    @media (max-width: 1100px) {
+      .container {
+        width: min(100%, calc(100% - 32px));
+      }
+
+      .hero-wrap {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .hero-card {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
       .about-grid,
       .footer-panel {
         grid-template-columns: 1fr;
@@ -631,54 +705,249 @@
       .process-grid {
         grid-template-columns: 1fr 1fr;
       }
-
-      .nav {
-        align-items: flex-start;
-      }
-
-      .nav-right {
-        justify-content: flex-start;
-      }
     }
 
-    @media (max-width: 680px) {
-      .benefits,
-      .process-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 960px) {
+      .site-header {
+        position: sticky;
       }
 
       .nav {
         flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 12px 0;
       }
 
-      .nav-right,
+      .brand {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.88rem;
+        letter-spacing: 0.09em;
+      }
+
+      .brand img {
+        width: 54px;
+        height: 54px;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+      }
+
       .nav-links {
-        justify-content: flex-start;
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+        font-size: 0.92rem;
       }
 
       .hero {
-        padding-top: 34px;
+        padding: 46px 0 42px;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1.08;
+      }
+
+      .lead,
+      .luxury-quote,
+      .method-copy,
+      .section-subtitle,
+      .callout p {
+        font-size: 1rem;
+        line-height: 1.72;
+      }
+
+      .profile-photo {
+        width: 250px;
+        height: 250px;
+      }
+
+      .profile-logo {
+        width: 94px;
+      }
+
+      .hero-card,
+      .about-card,
+      .callout,
+      .footer-panel,
+      .benefit-card,
+      .process-card {
+        border-radius: 24px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100%, calc(100% - 22px));
+      }
+
+      .site-header {
+        backdrop-filter: blur(10px);
+      }
+
+      .brand {
+        gap: 10px;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+      }
+
+      .brand span {
+        line-height: 1.2;
+      }
+
+      .nav-right {
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        order: 3;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-top: 6px;
+        padding: 10px;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.92);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 12px;
+        border-radius: 12px;
+        text-align: center;
+        background: rgba(248,241,236,0.7);
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .lang-toggle {
+        width: 44px;
+        height: 44px;
+      }
+
+      .icon-link {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero {
+        padding-top: 28px;
+        padding-bottom: 34px;
+      }
+
+      .eyebrow {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.86rem;
+        line-height: 1.45;
+        padding: 10px 14px;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 8vw, 2.45rem);
+        margin-bottom: 16px;
+      }
+
+      .hero-intro {
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .luxury-quote {
+        padding-left: 14px;
       }
 
       .hero-card,
       .about-card,
       .callout,
       .footer-panel {
-        padding: 22px;
+        padding: 20px;
+      }
+
+      .hero-card {
+        margin-top: 4px;
       }
 
       .profile-photo {
-        width: 230px;
-        height: 230px;
+        width: min(68vw, 220px);
+        height: min(68vw, 220px);
+      }
+
+      .profile-badge {
+        font-size: 0.95rem;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .actions {
         flex-direction: column;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .actions p {
+        text-align: center;
       }
 
       .btn {
         width: 100%;
+        padding: 15px 18px;
+        text-align: center;
       }
+
+      .benefits,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 44px 0;
+      }
+
+      .section-title {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+      }
+
+      .callout h2 {
+        font-size: clamp(1.65rem, 7vw, 2.2rem);
+      }
+
+      .footer-panel {
+        gap: 18px;
+      }
+
+      .footer-brand,
+      .footer-col {
+        text-align: center;
+        align-items: center;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+
+      .copyright {
+        padding-top: 18px;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+    }
     }
   </style>
 </head>
@@ -690,13 +959,16 @@
         <span style="font-weight:700;letter-spacing:0.12em;color:#000000;">VITÁLICA <span style="color:var(--green-dark);">NUTRICIÓN</span></span>
       </a>
       <div class="nav-right">
-        <nav class="nav-links">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+        <nav class="nav-links" id="mobileNav">
           <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
           <a href="#asesoria" data-es="Asesoría" data-en="Services">Asesoría</a>
           <a href="#porque" data-es="¿Por qué elegirnos?" data-en="Why choose us?">¿Por qué elegirnos?</a>
           <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
         </nav>
-        <button class="lang-toggle" id="langToggle">EN</button>
+        <button class="lang-toggle" id="langToggle" aria-label="Change language">
+  <img src="images/usa.png" alt="English" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow: 0 6px 14px rgba(0,0,0,0.15);">
+</button>
         <div class="social-icons">
           <a class="icon-link" href="https://www.instagram.com/vitalicanutricion/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -719,7 +991,8 @@
             <div class="luxury-quote" data-es="Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista." data-en="Many women with insulin resistance live with constant fatigue and feel that diets do not work. Here we work with strategy, science, and a realistic approach.">Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista.</div>
           </div>
           <div class="actions">
-            <a class="btn btn-primary" href="https://www.instagram.com/vitalicanutricion/" target="_blank" rel="noopener" data-es="Agenda tu cita informativa gratis" data-en="Book a free intro call">Agenda tu cita informativa gratis</a>
+            <p style="width:100%;margin:0 0 6px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y te ayudo personalmente !" data-en="Message me \"I WANT MY CALL\" and I’ll help you personally !">Escríbeme "QUIERO MI CITA" y te ayudo personalmente !</p>
+            <a class="btn btn-primary" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Agenda tu cita informativa gratis" data-en="Book a free intro call">Agenda tu cita informativa gratis</a>
           </div>
         </div>
 
@@ -820,7 +1093,8 @@
           <div class="callout-kicker" data-es="VITÁLICA NUTRICIÓN" data-en="VITÁLICA NUTRITION">VITÁLICA NUTRICIÓN</div>
           <h2 data-es="Tu proceso merece un enfoque más amable y más consciente" data-en="Your process deserves a kinder and more mindful approach">Tu proceso merece un enfoque más amable y más consciente</h2>
           <p data-es="Si estás lidiando con resistencia a la insulina, no necesitas otra solución rígida o imposible de sostener. Necesitas estrategia, ciencia y flexibilidad. Mi objetivo es ayudarte a mejorar tu salud y bajar de peso sin vivir en conflicto con la comida, con decisiones que sí funcionan en tu vida real." data-en="If you are dealing with insulin resistance, you do not need another rigid or impossible solution to sustain. You need strategy, science, and flexibility. My goal is to help you improve your health and lose weight without living in conflict with food, with decisions that actually work in your real life.">Si estás lidiando con resistencia a la insulina, no necesitas otra solución rígida o imposible de sostener. Necesitas estrategia, ciencia y flexibilidad. Mi objetivo es ayudarte a mejorar tu salud y bajar de peso sin vivir en conflicto con la comida, con decisiones que sí funcionan en tu vida real.</p>
-          <a class="btn btn-instagram" href="https://www.instagram.com/vitalicanutricion/" target="_blank" rel="noopener" data-es="Contáctame para poder ayudarte" data-en="Contact me so I can help you">Contáctame para poder ayudarte</a>
+          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y coordinamos tu evaluación !" data-en="Message me \"I WANT MY CALL\" and we’ll schedule your session !">Escríbeme "QUIERO MI CITA" y coordinamos tu evaluación !</p>
+          <a class="btn btn-instagram" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Contáctame para poder ayudarte" data-en="Contact me so I can help you">Contáctame para poder ayudarte</a>
         </div>
       </div>
     </section>
@@ -853,7 +1127,8 @@
         <div class="footer-col">
           <h4 data-es="ESCRÍBEME" data-en="WRITE TO ME">ESCRÍBEME</h4>
           <p style="margin-top:0;" data-es="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque cercano y estratégico para que cuidar tu salud se vuelva sostenible." data-en="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>REAL FOOD · ENJOYMENT · SCIENCE</strong>. A close and strategic approach so caring for your health becomes sustainable."><strong style="color:var(--pink-strong);letter-spacing:0.03em;">COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque cercano y estratégico para que cuidar tu salud se vuelva sostenible.</p>
-          <a class="btn btn-primary" style="color:#ffffff;" href="https://www.instagram.com/vitalicanutricion/" target="_blank" rel="noopener" data-es="Agenda tu cita gratis" data-en="Book a free intro call">Agenda tu cita gratis</a>
+          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y agendamos contigo !" data-en="Message me \"I WANT MY CALL\" and we’ll book it !">Escríbeme "QUIERO MI CITA" y agendamos contigo !</p>
+          <a class="btn btn-primary" style="color:#ffffff;" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Agenda tu cita gratis" data-en="Book a free intro call">Agenda tu cita gratis</a>
         </div>
       </div>
 
@@ -871,13 +1146,34 @@
         const content = lang === 'es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
         if (content) el.innerHTML = content;
       });
-      toggle.textContent = lang === 'es' ? 'EN' : 'ES';
+      toggle.innerHTML = lang === 'es'
+        ? '<img src="images/usa.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow:0 6px 14px rgba(0,0,0,0.15);">'
+        : '<img src="images/peru.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow:0 6px 14px rgba(0,0,0,0.15);">';
       document.title = lang === 'es' ? 'VITÁLICA NUTRICIÓN | Paola Zapater' : 'VITÁLICA NUTRITION | Paola Zapater';
     }
 
     toggle.addEventListener('click', () => {
       currentLang = currentLang === 'es' ? 'en' : 'es';
       applyLanguage(currentLang);
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 680) {
+          mobileNav.classList.remove('is-open');
+          menuToggle.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   </script>
 </body>
