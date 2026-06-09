@@ -6,21 +6,22 @@
   <title>VITÁLICA NUTRICIÓN | Paola Zapater</title>
   <style>
     :root {
-      --green: #8CC63F;
-      --green-dark: #5E8E44;
-      --pink-strong: #C94B7A;
-      --rose: #E8D7DD;
-      --blush: #F6F1EE;
-      --sand: #E9E1D8;
-      --champagne: #D8C3A5;
-      --taupe: #8D7B6D;
-      --cream: #FBF8F4;
-      --text: #39363C;
-      --muted: #6E6770;
-      --line: rgba(57,54,60,0.08);
+      --green: #3bb64b;
+      --green-dark: #2e9a3d;
+      --pink-strong: #ee1f7b;
+      --pink-soft: #e26978;
+      --rose: #fce8f0;
+      --blush: #fff5f9;
+      --sand: #f8eacd;
+      --champagne: #f6e19e;
+      --taupe: #c47a3a;
+      --cream: #fffdf9;
+      --text: #2a1a2e;
+      --muted: #7a6070;
+      --line: rgba(238,31,123,0.08);
       --white: #FFFFFF;
-      --shadow: 0 20px 50px rgba(42, 33, 24, 0.06);
-      --shadow-soft: 0 10px 30px rgba(42, 33, 24, 0.04);
+      --shadow: 0 20px 50px rgba(238, 31, 123, 0.08);
+      --shadow-soft: 0 10px 30px rgba(238, 31, 123, 0.05);
       --radius: 28px;
       --serif: Georgia, "Times New Roman", serif;
     }
@@ -31,7 +32,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: linear-gradient(180deg, #fbf8f4 0%, #f7f2ec 100%);
+      background: linear-gradient(180deg, #fffdf9 0%, #fff5f9 100%);
     }
 
     img { max-width: 100%; display: block; }
@@ -46,7 +47,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(251,248,244,0.9);
+      background: rgba(255,253,249,0.95);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(57,54,60,0.05);
     }
@@ -84,72 +85,6 @@
       justify-content: flex-end;
     }
 
-    .menu-toggle {
-      display: none;
-      width: 46px;
-      height: 46px;
-      border: 1px solid rgba(201,75,122,0.18);
-      background: rgba(255,255,255,0.92);
-      border-radius: 14px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: var(--shadow-soft);
-      color: var(--text);
-      padding: 0;
-      position: relative;
-    }
-
-    .menu-toggle span,
-    .menu-toggle::before,
-    .menu-toggle::after {
-      content: "";
-      display: block;
-      width: 18px;
-      height: 2px;
-      background: currentColor;
-      border-radius: 999px;
-      transition: transform 0.22s ease, opacity 0.22s ease;
-      position: absolute;
-    }
-
-    .menu-toggle span {
-      position: relative;
-    }
-
-    .menu-toggle::before {
-      transform: translateY(-6px);
-    }
-
-    .menu-toggle::after {
-      transform: translateY(6px);
-    }
-
-    .menu-toggle.is-open span {
-      opacity: 0;
-    }
-
-    .menu-toggle.is-open::before {
-      transform: rotate(45deg);
-    }
-
-    .menu-toggle.is-open::after {
-      transform: rotate(-45deg);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 22px;
-      font-size: 0.95rem;
-      color: var(--muted);
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: end;
-      font-weight:700;
-    }
-
-    .nav-links a:hover { color: var(--pink-strong); }
-
     .social-icons {
       display: flex;
       align-items: center;
@@ -167,7 +102,7 @@
       border: 1px solid rgba(0,0,0,0.06);
       color: var(--pink-strong);
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 20px rgba(238,31,123,0.08);
     }
 
     .icon-link[href*="instagram"],
@@ -209,8 +144,8 @@
     .hero {
       padding: 76px 0 58px;
       background:
-        radial-gradient(circle at top right, rgba(216,195,165,0.16), transparent 24%),
-        linear-gradient(180deg, #fbf8f4 0%, #f5eee8 100%);
+        radial-gradient(circle at top right, rgba(246,225,158,0.25), transparent 28%),
+        linear-gradient(180deg, #fffdf9 0%, #fff0f6 100%);
     }
 
     .hero-wrap {
@@ -226,11 +161,11 @@
       gap: 8px;
       padding: 10px 16px;
       border-radius: 999px;
-      background: rgba(94,142,68,0.08);
+      background: rgba(59,182,75,0.10);
       color: var(--green-dark);
       font-weight: 700;
       margin-bottom: 20px;
-      border: 1px solid rgba(94,142,68,0.12);
+      border: 1px solid rgba(59,182,75,0.18);
     }
 
     h1, .section-title, .callout h2 {
@@ -262,7 +197,7 @@
     }
 
     .luxury-quote {
-      border-left: 2px solid rgba(201,75,122,0.35);
+      border-left: 2px solid rgba(238,31,123,0.40);
       padding: 4px 0 4px 18px;
       color: var(--text);
       font-size: 1.05rem;
@@ -318,14 +253,14 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #b86b8d, var(--pink-strong));
+      background: linear-gradient(135deg, #e26978, #ee1f7b);
       color: var(--white);
     }
 
     .btn-secondary {
       background: rgba(255,255,255,0.95);
       color: var(--text);
-      border: 2px solid rgba(201,75,122,0.35);
+      border: 2px solid rgba(238,31,123,0.35);
       font-weight: 600;
     }
 
@@ -335,17 +270,17 @@
     }
 
     .btn-instagram {
-      background: #8CCF6B;
+      background: linear-gradient(135deg, #3bb64b, #2e9a3d);
       color: #ffffff;
     }
 
     .btn-instagram:hover {
-      background: #7fc65d;
+      background: linear-gradient(135deg, #2e9a3d, #267a32);
     }
 
     .hero-card {
       position: relative;
-      background: linear-gradient(180deg, rgba(255,255,255,0.88) 0%, rgba(248,241,236,0.92) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,240,246,0.90) 100%);
       border-radius: 36px;
       padding: 38px 30px 30px;
       box-shadow: var(--shadow);
@@ -360,7 +295,7 @@
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      background: rgba(201,75,122,0.06);
+      background: rgba(238,31,123,0.07);
       filter: blur(2px);
       pointer-events: none;
     }
@@ -372,7 +307,7 @@
       width: 240px;
       height: 240px;
       border-radius: 999px;
-      background: rgba(94,142,68,0.07);
+      background: rgba(59,182,75,0.08);
       pointer-events: none;
     }
 
@@ -395,7 +330,7 @@
       width: 285px;
       height: 285px;
       border-radius: 50%;
-      background: linear-gradient(145deg, rgba(201,75,122,0.08), rgba(94,142,68,0.08)), var(--blush);
+      background: linear-gradient(145deg, rgba(238,31,123,0.08), rgba(59,182,75,0.08)), var(--blush);
       background-image: url('images/foto.jpg');
       background-size: cover;
       background-position: center;
@@ -405,10 +340,6 @@
       place-items: center;
       overflow: hidden;
       position: relative;
-    }
-
-    .profile-photo::before {
-      content: "";
     }
 
     .profile-badge {
@@ -428,7 +359,7 @@
     }
 
     .section.alt {
-      background: linear-gradient(180deg, #f4ede6 0%, #fbf8f4 100%);
+      background: linear-gradient(180deg, #fff8e8 0%, #fffdf9 100%);
     }
 
     .section-title {
@@ -530,7 +461,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(201,75,122,0.10);
+      background: rgba(238,31,123,0.10);
       color: var(--pink-strong);
       font-weight: 700;
       margin-bottom: 14px;
@@ -554,7 +485,7 @@
     }
 
     .callout {
-      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(246,241,238,0.95) 100%);
+      background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,240,246,0.90) 100%);
       color: var(--text);
       border-radius: 40px;
       padding: 42px 38px;
@@ -573,7 +504,7 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background: rgba(201,75,122,0.05);
+      background: rgba(238,31,123,0.06);
       pointer-events: none;
     }
 
@@ -585,7 +516,7 @@
       width: 170px;
       height: 170px;
       border-radius: 50%;
-      background: rgba(94,142,68,0.06);
+      background: rgba(59,182,75,0.07);
       pointer-events: none;
     }
 
@@ -617,7 +548,7 @@
     }
 
     .footer-panel {
-      background: linear-gradient(180deg, #f3ebe3 0%, #efe6dd 100%);
+      background: linear-gradient(180deg, #fff8e8 0%, #ffeef6 100%);
       border-radius: 36px;
       padding: 28px;
       box-shadow: var(--shadow-soft);
@@ -643,21 +574,21 @@
 
     .footer-title {
       margin: 0;
-      color: #9d7661;
+      color: #ee1f7b;
       font-size: 1.5rem;
       font-family: var(--serif);
     }
 
     .footer-col h4 {
       margin: 0 0 12px;
-      color: #9d7661;
+      color: #ee1f7b;
       font-size: 1.05rem;
       letter-spacing: 0.08em;
     }
 
     .footer-col p,
     .footer-col a {
-      color: #896d5f;
+      color: #a0506a;
       line-height: 1.9;
       font-size: 1rem;
     }
@@ -708,20 +639,12 @@
     }
 
     @media (max-width: 960px) {
-      .site-header {
-        position: sticky;
-      }
-
       .nav {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 14px;
+        flex-direction: row;
         padding: 12px 0;
       }
 
       .brand {
-        justify-content: center;
-        text-align: center;
         font-size: 0.88rem;
         letter-spacing: 0.09em;
       }
@@ -732,16 +655,7 @@
       }
 
       .nav-right {
-        width: 100%;
-        justify-content: center;
         gap: 12px;
-      }
-
-      .nav-links {
-        width: 100%;
-        justify-content: center;
-        gap: 16px;
-        font-size: 0.92rem;
       }
 
       .hero {
@@ -753,15 +667,6 @@
         line-height: 1.08;
       }
 
-      .lead,
-      .luxury-quote,
-      .method-copy,
-      .section-subtitle,
-      .callout p {
-        font-size: 1rem;
-        line-height: 1.72;
-      }
-
       .profile-photo {
         width: 250px;
         height: 250px;
@@ -769,15 +674,6 @@
 
       .profile-logo {
         width: 94px;
-      }
-
-      .hero-card,
-      .about-card,
-      .callout,
-      .footer-panel,
-      .benefit-card,
-      .process-card {
-        border-radius: 24px;
       }
     }
 
@@ -798,40 +694,6 @@
 
       .brand span {
         line-height: 1.2;
-      }
-
-      .nav-right {
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        order: 3;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-        margin-top: 6px;
-        padding: 10px;
-        border-radius: 18px;
-        background: rgba(255,255,255,0.92);
-        box-shadow: var(--shadow-soft);
-      }
-
-      .nav-links.is-open {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 10px 12px;
-        border-radius: 12px;
-        text-align: center;
-        background: rgba(248,241,236,0.7);
-      }
-
-      .menu-toggle {
-        display: inline-flex;
       }
 
       .lang-toggle {
@@ -948,7 +810,6 @@
         line-height: 1.6;
       }
     }
-    }
   </style>
 </head>
 <body>
@@ -959,16 +820,9 @@
         <span style="font-weight:700;letter-spacing:0.12em;color:#000000;">VITÁLICA <span style="color:var(--green-dark);">NUTRICIÓN</span></span>
       </a>
       <div class="nav-right">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
-        <nav class="nav-links" id="mobileNav">
-          <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
-          <a href="#asesoria" data-es="Asesoría" data-en="Services">Asesoría</a>
-          <a href="#porque" data-es="¿Por qué elegirnos?" data-en="Why choose us?">¿Por qué elegirnos?</a>
-          <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
-        </nav>
         <button class="lang-toggle" id="langToggle" aria-label="Change language">
-  <img src="images/usa.png" alt="English" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow: 0 6px 14px rgba(0,0,0,0.15);">
-</button>
+          <img src="images/usa.png" alt="English" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow: 0 6px 14px rgba(0,0,0,0.15);">
+        </button>
         <div class="social-icons">
           <a class="icon-link" href="https://www.instagram.com/vitalicanutricion/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -991,7 +845,7 @@
             <div class="luxury-quote" data-es="Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista." data-en="Many women with insulin resistance live with constant fatigue and feel that diets do not work. Here we work with strategy, science, and a realistic approach.">Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista.</div>
           </div>
           <div class="actions">
-            <p style="width:100%;margin:0 0 6px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y te ayudo personalmente !" data-en="Message me \"I WANT MY CALL\" and I’ll help you personally !">Escríbeme "QUIERO MI CITA" y te ayudo personalmente !</p>
+            <p style="width:100%;margin:0 0 6px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y te ayudo personalmente !" data-en="Message me \"I WANT MY CALL\" and I'll help you personally !">Escríbeme "QUIERO MI CITA" y te ayudo personalmente !</p>
             <a class="btn btn-primary" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Agenda tu cita informativa gratis" data-en="Book a free intro call">Agenda tu cita informativa gratis</a>
           </div>
         </div>
@@ -1007,6 +861,32 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="video" style="padding: 60px 0; text-align:center;">
+      <div class="container">
+        <h2 class="section-title" style="margin-bottom:10px;" data-es="Así es como trabajo con mis chicas" data-en="This is how I work with my girls">Así es como trabajo con mis chicas</h2>
+        <p class="section-subtitle" style="margin-bottom:32px;" data-es="Mira este video y conoce mi método antes de agendar tu llamada." data-en="Watch this video and learn about my method before booking your call.">Mira este video y conoce mi método antes de agendar tu llamada.</p>
+
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:24px;box-shadow:var(--shadow);max-width:860px;margin:0 auto 36px;">
+          <iframe
+            src="https://drive.google.com/file/d/1HyYq0_OR9h2hBsGccN-QQbGzOf0QSFAv/preview"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:24px;"
+            allow="autoplay"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/51987758451?text=Hola%20Paola%2C%20vi%20tu%20video%20y%20quiero%20agendar%20mi%20videollamada%20gratuita"
+          target="_blank"
+          rel="noopener"
+          style="font-size:1.08rem;padding:18px 36px;margin:0 auto;display:inline-flex;"
+          data-es="📅 Agenda tu videollamada gratuita acá" data-en="📅 Book your free video call here">
+          📅 Agenda tu videollamada gratuita acá
+        </a>
       </div>
     </section>
 
@@ -1030,7 +910,7 @@
             <h3 data-es="Mi enfoque" data-en="My approach">Mi enfoque</h3>
             <p data-es="La idea no es que comas perfecto. La idea es equilibrar, comer bien y conseguir tu objetivo desde un enfoque amable, práctico y sostenible." data-en="The goal is not to eat perfectly. The goal is to create balance, eat well, and reach your objective through a kind, practical, and sustainable approach.">La idea no es que comas perfecto. La idea es equilibrar, comer bien y conseguir tu objetivo desde un enfoque amable, práctico y sostenible.</p>
             <p data-es="Cuando entendemos tu metabolismo y tu caso en profundidad, todo empieza a tener más sentido: hay más energía, menos ruido mental alrededor de la comida y resultados que se sienten posibles en la vida real." data-en="When we understand your metabolism and your case in depth, everything starts to make more sense: there is more energy, less mental noise around food, and results that feel possible in real life.">Cuando entendemos tu metabolismo y tu caso en profundidad, todo empieza a tener más sentido: hay más energía, menos ruido mental alrededor de la comida y resultados que se sienten posibles en la vida real.</p>
-            <p style="margin-bottom:0;" data-es="<strong style='color:#C94B7A;'>Mi misión</strong> es ayudarte a entender cómo funciona tu metabolismo y cómo la insulina influye en tu energía, tu hambre y tu peso. Quiero mostrarte que sí es posible bajar de peso, recuperar salud y regular la insulina sin vivir en conflicto con la comida, incluso si hasta ahora sentías que nada funcionaba para ti." data-en="<strong style='color:#C94B7A;'>My mission</strong> is to help you understand how your metabolism works and how insulin affects your energy, hunger, and weight. I want to show you that it is possible to lose weight, recover your health, and regulate insulin without living in conflict with food, even if until now you felt that nothing worked for you."><strong style="color:#C94B7A;">Mi misión</strong> es ayudarte a entender cómo funciona tu metabolismo y cómo la insulina influye en tu energía, tu hambre y tu peso. Quiero mostrarte que sí es posible bajar de peso, recuperar salud y regular la insulina sin vivir en conflicto con la comida, incluso si hasta ahora sentías que nada funcionaba para ti.</p>
+            <p style="margin-bottom:0;" data-es="<strong style='color:#ee1f7b;'>Mi misión</strong> es ayudarte a entender cómo funciona tu metabolismo y cómo la insulina influye en tu energía, tu hambre y tu peso. Quiero mostrarte que sí es posible bajar de peso, recuperar salud y regular la insulina sin vivir en conflicto con la comida, incluso si hasta ahora sentías que nada funcionaba para ti." data-en="<strong style='color:#ee1f7b;'>My mission</strong> is to help you understand how your metabolism works and how insulin affects your energy, hunger, and weight. I want to show you that it is possible to lose weight, recover your health, and regulate insulin without living in conflict with food, even if until now you felt that nothing worked for you."><strong style="color:#ee1f7b;">Mi misión</strong> es ayudarte a entender cómo funciona tu metabolismo y cómo la insulina influye en tu energía, tu hambre y tu peso. Quiero mostrarte que sí es posible bajar de peso, recuperar salud y regular la insulina sin vivir en conflicto con la comida, incluso si hasta ahora sentías que nada funcionaba para ti.</p>
           </div>
         </div>
       </div>
@@ -1093,7 +973,7 @@
           <div class="callout-kicker" data-es="VITÁLICA NUTRICIÓN" data-en="VITÁLICA NUTRITION">VITÁLICA NUTRICIÓN</div>
           <h2 data-es="Tu proceso merece un enfoque más amable y más consciente" data-en="Your process deserves a kinder and more mindful approach">Tu proceso merece un enfoque más amable y más consciente</h2>
           <p data-es="Si estás lidiando con resistencia a la insulina, no necesitas otra solución rígida o imposible de sostener. Necesitas estrategia, ciencia y flexibilidad. Mi objetivo es ayudarte a mejorar tu salud y bajar de peso sin vivir en conflicto con la comida, con decisiones que sí funcionan en tu vida real." data-en="If you are dealing with insulin resistance, you do not need another rigid or impossible solution to sustain. You need strategy, science, and flexibility. My goal is to help you improve your health and lose weight without living in conflict with food, with decisions that actually work in your real life.">Si estás lidiando con resistencia a la insulina, no necesitas otra solución rígida o imposible de sostener. Necesitas estrategia, ciencia y flexibilidad. Mi objetivo es ayudarte a mejorar tu salud y bajar de peso sin vivir en conflicto con la comida, con decisiones que sí funcionan en tu vida real.</p>
-          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y coordinamos tu evaluación !" data-en="Message me \"I WANT MY CALL\" and we’ll schedule your session !">Escríbeme "QUIERO MI CITA" y coordinamos tu evaluación !</p>
+          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y coordinamos tu evaluación !" data-en="Message me \"I WANT MY CALL\" and we'll schedule your session !">Escríbeme "QUIERO MI CITA" y coordinamos tu evaluación !</p>
           <a class="btn btn-instagram" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Contáctame para poder ayudarte" data-en="Contact me so I can help you">Contáctame para poder ayudarte</a>
         </div>
       </div>
@@ -1106,7 +986,7 @@
         <div class="footer-brand">
           <img src="images/logo1.jpg" alt="Logo VITÁLICA NUTRICIÓN" />
           <h3 class="footer-title" data-es="VITÁLICA NUTRICIÓN" data-en="VITÁLICA NUTRITION">VITÁLICA NUTRICIÓN</h3>
-          <p style="margin:0;color:#896d5f;line-height:1.85;" data-es="Ayudo a mujeres con resistencia a la insulina a recuperar energía, mejorar su salud y sentirse bien en su cuerpo." data-en="I help women with insulin resistance recover energy, improve their health, and feel good in their bodies.">Ayudo a mujeres con resistencia a la insulina a recuperar energía, mejorar su salud y sentirse bien en su cuerpo.</p>
+          <p style="margin:0;color:#a0506a;line-height:1.85;" data-es="Ayudo a mujeres con resistencia a la insulina a recuperar energía, mejorar su salud y sentirse bien en su cuerpo." data-en="I help women with insulin resistance recover energy, improve their health, and feel good in their bodies.">Ayudo a mujeres con resistencia a la insulina a recuperar energía, mejorar su salud y sentirse bien en su cuerpo.</p>
         </div>
 
         <div class="footer-col">
@@ -1127,7 +1007,7 @@
         <div class="footer-col">
           <h4 data-es="ESCRÍBEME" data-en="WRITE TO ME">ESCRÍBEME</h4>
           <p style="margin-top:0;" data-es="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque cercano y estratégico para que cuidar tu salud se vuelva sostenible." data-en="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>REAL FOOD · ENJOYMENT · SCIENCE</strong>. A close and strategic approach so caring for your health becomes sustainable."><strong style="color:var(--pink-strong);letter-spacing:0.03em;">COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque cercano y estratégico para que cuidar tu salud se vuelva sostenible.</p>
-          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y agendamos contigo !" data-en="Message me \"I WANT MY CALL\" and we’ll book it !">Escríbeme "QUIERO MI CITA" y agendamos contigo !</p>
+          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y agendamos contigo !" data-en="Message me \"I WANT MY CALL\" and we'll book it !">Escríbeme "QUIERO MI CITA" y agendamos contigo !</p>
           <a class="btn btn-primary" style="color:#ffffff;" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Agenda tu cita gratis" data-en="Book a free intro call">Agenda tu cita gratis</a>
         </div>
       </div>
@@ -1155,25 +1035,6 @@
     toggle.addEventListener('click', () => {
       currentLang = currentLang === 'es' ? 'en' : 'es';
       applyLanguage(currentLang);
-    });
-
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileNav = document.getElementById('mobileNav');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileNav.classList.toggle('is-open');
-      menuToggle.classList.toggle('is-open', isOpen);
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    mobileNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 680) {
-          mobileNav.classList.remove('is-open');
-          menuToggle.classList.remove('is-open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
     });
   </script>
 </body>
