@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VITÁLICA NUTRICIÓN | Paola Zapater</title>
+  <title>Frena tu Insulina | Paola Zapater</title>
   <style>
     :root {
       --green: #3bb64b;
@@ -64,17 +64,13 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      font-size: 0.96rem;
-      color: var(--green-dark);
     }
 
     .brand img {
-      width: 60px;
-      height: 60px;
+      height: 42px;
+      width: auto;
       object-fit: contain;
-      border-radius: 18px;
+      border-radius: 8px;
     }
 
     .nav-right {
@@ -149,23 +145,9 @@
     }
 
     .hero-wrap {
-      display: grid;
-      grid-template-columns: 1.06fr 0.94fr;
-      gap: 42px;
-      align-items: start;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: rgba(59,182,75,0.10);
-      color: var(--green-dark);
-      font-weight: 700;
-      margin-bottom: 20px;
-      border: 1px solid rgba(59,182,75,0.18);
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
     }
 
     h1, .section-title, .callout h2 {
@@ -193,7 +175,7 @@
     .hero-intro {
       display: grid;
       gap: 16px;
-      margin-bottom: 28px;
+      margin-bottom: 0;
     }
 
     .luxury-quote {
@@ -227,6 +209,7 @@
       margin: 30px 0 16px;
       position: relative;
       z-index: 5;
+      justify-content: center;
     }
 
     .btn {
@@ -280,6 +263,8 @@
 
     .hero-card {
       position: relative;
+      max-width: 520px;
+      margin: 0 auto;
       background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,240,246,0.90) 100%);
       border-radius: 36px;
       padding: 38px 30px 30px;
@@ -321,8 +306,8 @@
     }
 
     .profile-logo {
-      width: 112px;
-      height: auto;
+      height: 46px;
+      width: auto;
       object-fit: contain;
     }
 
@@ -446,6 +431,10 @@
       margin-top: 28px;
     }
 
+    .process-grid.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .process-card {
       background: rgba(255,255,255,0.86);
       border-radius: 26px;
@@ -478,6 +467,82 @@
       margin: 0;
       color: var(--muted);
       line-height: 1.8;
+    }
+
+    .video-frame {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      max-width: 860px;
+      margin: 0 auto 30px;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: 24px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.88);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(216,195,165,0.22);
+    }
+
+    .testimonial-video {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .testimonial-card h3 {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      line-height: 1.4;
+      margin: 0 0 8px;
+      color: var(--text);
+    }
+
+    .testimonial-meta {
+      color: var(--pink-strong);
+      font-weight: 700;
+      margin: 0 0 10px;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+    }
+
+    .testimonial-text {
+      color: var(--muted);
+      line-height: 1.8;
+      margin: 0;
     }
 
     .callout-section {
@@ -567,8 +632,8 @@
     }
 
     .footer-brand img {
-      width: 96px;
-      height: auto;
+      height: 60px;
+      width: auto;
       object-fit: contain;
     }
 
@@ -617,16 +682,6 @@
         width: min(100%, calc(100% - 32px));
       }
 
-      .hero-wrap {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .hero-card {
-        max-width: 720px;
-        margin: 0 auto;
-      }
-
       .about-grid,
       .footer-panel {
         grid-template-columns: 1fr;
@@ -644,14 +699,8 @@
         padding: 12px 0;
       }
 
-      .brand {
-        font-size: 0.88rem;
-        letter-spacing: 0.09em;
-      }
-
       .brand img {
-        width: 54px;
-        height: 54px;
+        height: 36px;
       }
 
       .nav-right {
@@ -673,7 +722,7 @@
       }
 
       .profile-logo {
-        width: 94px;
+        height: 40px;
       }
     }
 
@@ -688,12 +737,6 @@
 
       .brand {
         gap: 10px;
-        font-size: 0.78rem;
-        letter-spacing: 0.06em;
-      }
-
-      .brand span {
-        line-height: 1.2;
       }
 
       .lang-toggle {
@@ -711,15 +754,6 @@
         padding-bottom: 34px;
       }
 
-      .eyebrow {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.86rem;
-        line-height: 1.45;
-        padding: 10px 14px;
-      }
-
       h1 {
         font-size: clamp(1.8rem, 8vw, 2.45rem);
         margin-bottom: 16px;
@@ -727,7 +761,6 @@
 
       .hero-intro {
         gap: 12px;
-        margin-bottom: 18px;
       }
 
       .luxury-quote {
@@ -737,12 +770,9 @@
       .hero-card,
       .about-card,
       .callout,
-      .footer-panel {
+      .footer-panel,
+      .testimonial-card {
         padding: 20px;
-      }
-
-      .hero-card {
-        margin-top: 4px;
       }
 
       .profile-photo {
@@ -816,8 +846,7 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#inicio">
-        <img src="images/logo1.jpg" alt="VITÁLICA NUTRICIÓN" />
-        <span style="font-weight:700;letter-spacing:0.12em;color:#000000;">VITÁLICA <span style="color:var(--green-dark);">NUTRICIÓN</span></span>
+        <img src="images/logo-frena-tu-insulina.jpeg" alt="Frena tu Insulina" />
       </a>
       <div class="nav-right">
         <button class="lang-toggle" id="langToggle" aria-label="Change language">
@@ -837,131 +866,193 @@
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-wrap">
-        <div>
-          <div class="eyebrow" data-es="Nutrición estratégica para mujeres con resistencia a la insulina" data-en="Strategic nutrition for women with insulin resistance">Nutrición estratégica para mujeres con resistencia a la insulina</div>
-          <h1 data-es="Ayudo a <span class='highlight'>mujeres con resistencia a la insulina</span> a entender su metabolismo, recuperar energía y mejorar su salud de forma sostenible." data-en="I help <span class='highlight'>women with insulin resistance</span> understand their metabolism, recover their energy, and improve their health in a sustainable way.">Ayudo a <span class="highlight">mujeres con resistencia a la insulina</span> a entender su metabolismo, recuperar energía y mejorar su salud de forma sostenible.</h1>
-          <div class="hero-intro">
-            <p class="lead" data-es="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque nutricional diseñado para ayudarte a recuperar energía, entender tu metabolismo y construir resultados sostenibles sin dietas extremas." data-en="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>REAL FOOD · ENJOYMENT · SCIENCE</strong>. A nutrition approach designed to help you recover energy, understand your metabolism, and build sustainable results without extreme diets."><strong style="color:var(--pink-strong);letter-spacing:0.03em;">COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque nutricional diseñado para ayudarte a recuperar energía, entender tu metabolismo y construir resultados sostenibles sin dietas extremas.</p>
-            <div class="luxury-quote" data-es="Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista." data-en="Many women with insulin resistance live with constant fatigue and feel that diets do not work. Here we work with strategy, science, and a realistic approach.">Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista.</div>
-          </div>
-          <div class="actions">
-            <p style="width:100%;margin:0 0 6px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y te ayudo personalmente !" data-en="Message me \"I WANT MY CALL\" and I'll help you personally !">Escríbeme "QUIERO MI CITA" y te ayudo personalmente !</p>
-            <a class="btn btn-primary" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Agenda tu cita informativa gratis" data-en="Book a free intro call">Agenda tu cita informativa gratis</a>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="profile-wrap">
-            <img class="profile-logo" src="images/logo1.jpg" alt="Logo Vitálica" />
-            <div class="profile-photo" aria-label="Foto profesional de Paola"></div>
-            <div class="profile-badge" data-es="Paola Zapater <span style='color:#9CA3AF;'>|</span> Nutricionista" data-en="Paola Zapater <span style='color:#9CA3AF;'>|</span> Nutritionist">Paola Zapater <span style="color:#9CA3AF;">|</span> Nutricionista</div>
-            <div class="method-copy" style="margin-top:20px;" data-es="<strong>Mi método va más allá de una dieta.</strong> Analizamos tu caso, regulamos la insulina y construimos un plan sostenible que funcione en tu vida real. Comer perfecto no funciona; el equilibrio sí. Cuando entiendes tu metabolismo, vuelve la energía, el cuerpo responde y recuperas la confianza en ti misma." data-en="<strong>My method goes beyond a diet.</strong> We analyze your case, regulate insulin, and build a sustainable plan that works in your real life. Eating perfectly does not work; balance does. When you understand your metabolism, your energy returns, your body responds, and you regain confidence in yourself.">
-              <strong>Mi método va más allá de una dieta.</strong> Analizamos tu caso, regulamos la insulina y construimos un plan sostenible que funcione en tu vida real.
-              Comer perfecto no funciona; el equilibrio sí. Cuando entiendes tu metabolismo, vuelve la energía, el cuerpo responde y recuperas la confianza en ti misma.
-            </div>
-          </div>
-        </div>
+        <h1 data-es="Ayudo a <span class='highlight'>mujeres con resistencia a la insulina</span> a entender su metabolismo, recuperar energía y mejorar su salud de forma sostenible." data-en="I help <span class='highlight'>women with insulin resistance</span> understand their metabolism, recover their energy, and improve their health in a sustainable way.">Ayudo a <span class="highlight">mujeres con resistencia a la insulina</span> a entender su metabolismo, recuperar energía y mejorar su salud de forma sostenible.</h1>
       </div>
     </section>
 
-    <section class="section" id="video" style="padding: 60px 0; text-align:center;">
+    <section class="section" id="video" style="padding: 40px 0 60px; text-align:center;">
       <div class="container">
         <h2 class="section-title" style="margin-bottom:10px;" data-es="Así es como trabajo con mis chicas" data-en="This is how I work with my girls">Así es como trabajo con mis chicas</h2>
         <p class="section-subtitle" style="margin-bottom:32px;" data-es="Mira este video y conoce mi método antes de agendar tu llamada." data-en="Watch this video and learn about my method before booking your call.">Mira este video y conoce mi método antes de agendar tu llamada.</p>
 
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:24px;box-shadow:var(--shadow);max-width:860px;margin:0 auto 36px;">
+        <div class="video-frame">
           <iframe
-            src="https://drive.google.com/file/d/1HyYq0_OR9h2hBsGccN-QQbGzOf0QSFAv/preview"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:24px;"
-            allow="autoplay"
+            src="https://www.youtube.com/embed/2LrbpUvLh24"
+            title="Frena tu Insulina - Video presentación"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
         </div>
 
-        <a
-          class="btn btn-primary"
-          href="https://wa.me/51987758451?text=Hola%20Paola%2C%20vi%20tu%20video%20y%20quiero%20agendar%20mi%20videollamada%20gratuita"
-          target="_blank"
-          rel="noopener"
-          style="font-size:1.08rem;padding:18px 36px;margin:0 auto;display:inline-flex;"
-          data-es="📅 Agenda tu videollamada gratuita acá" data-en="📅 Book your free video call here">
-          📅 Agenda tu videollamada gratuita acá
-        </a>
+        <div class="actions">
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/51987758451?text=Hola%21%20Quiero%20una%20cita%2C%20he%20visto%20el%20video"
+            target="_blank"
+            rel="noopener"
+            style="font-size:1.08rem;padding:18px 36px;margin:0 auto;display:inline-flex;flex-direction:column;gap:4px;line-height:1.3;">
+            <span data-es="Agenda tu llamada con Paola" data-en="Book your call with Paola">Agenda tu llamada con Paola</span>
+            <span style="font-weight:500;font-size:0.82rem;opacity:0.92;" data-es="Solo si ya viste el video — hablarás conmigo" data-en="Only if you've watched the video — you'll be talking to me">Solo si ya viste el video — hablarás conmigo</span>
+          </a>
+        </div>
+
+        <div style="max-width:710px;margin:34px auto 0;text-align:left;">
+          <p class="lead" data-es="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque nutricional diseñado para ayudarte a recuperar energía, entender tu metabolismo y construir resultados sostenibles sin dietas extremas." data-en="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>REAL FOOD · ENJOYMENT · SCIENCE</strong>. A nutrition approach designed to help you recover energy, understand your metabolism, and build sustainable results without extreme diets."><strong style="color:var(--pink-strong);letter-spacing:0.03em;">COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque nutricional diseñado para ayudarte a recuperar energía, entender tu metabolismo y construir resultados sostenibles sin dietas extremas.</p>
+          <div class="luxury-quote" style="margin-top:16px;" data-es="Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista." data-en="Many women with insulin resistance live with constant fatigue and feel that diets do not work. Here we work with strategy, science, and a realistic approach.">Muchas mujeres con resistencia a la insulina viven cansancio constante y sienten que las dietas no funcionan. Aquí trabajamos con estrategia, ciencia y un enfoque realista.</div>
+        </div>
       </div>
     </section>
 
-    <section class="section alt" id="asesoria">
+    <section class="section" id="sobre-mi">
       <div class="container">
-        <h2 class="section-title" data-es="Una asesoría pensada para tu bienestar real" data-en="A nutrition service designed for your real well-being">Una asesoría pensada para tu bienestar real</h2>
-        <p class="section-subtitle" data-es="Trabajamos con enfoque personalizado, estrategia nutricional aterrizada a tu realidad y seguimiento cercano para que cuidar tu salud se sienta posible, sofisticado y sostenible." data-en="We work with a personalized approach, nutrition strategy grounded in your reality, and close support so taking care of your health feels possible, thoughtful, and sustainable.">Trabajamos con enfoque personalizado, estrategia nutricional aterrizada a tu realidad y seguimiento cercano para que cuidar tu salud se sienta posible, sofisticado y sostenible.</p>
-
-        <div class="about-grid">
-          <div class="about-card">
-            <h3 data-es="¿Qué encontrarás en Vitálica?" data-en="What will you find at Vitálica?">¿Qué encontrarás en Vitálica?</h3>
-            <ul>
-              <li data-es="Un plan nutricional adaptado a tu historia, tus objetivos y tu rutina." data-en="A nutrition plan adapted to your history, goals, and routine.">Un plan nutricional adaptado a tu historia, tus objetivos y tu rutina.</li>
-              <li data-es="Estrategias realistas para manejar resistencia a la insulina sin dietas extremas, sin hambre y sin culpa." data-en="Realistic strategies to manage insulin resistance without extreme diets, hunger, or guilt.">Estrategias realistas para manejar resistencia a la insulina sin dietas extremas, sin hambre y sin culpa.</li>
-              <li data-es="Educación alimentaria para que entiendas tu proceso, optimices decisiones y dejes de vivir en conflicto con la comida." data-en="Nutrition education so you understand your process, optimize decisions, and stop living in conflict with food.">Educación alimentaria para que entiendas tu proceso, optimices decisiones y dejes de vivir en conflicto con la comida.</li>
-              <li data-es="Acompañamiento humano con empatía, claridad y respaldo científico." data-en="Human support with empathy, clarity, and scientific guidance.">Acompañamiento humano con empatía, claridad y respaldo científico.</li>
-              <li data-es="Talleres semanales con nuestra comunidad donde compartimos herramientas prácticas, aclaramos mitos sobre nutrición y resistencia a la insulina, y resolvemos dudas reales que surgen durante el proceso." data-en="Weekly workshops with our community where we share practical tools, clarify myths about nutrition and insulin resistance, and answer real questions that arise during the process.">Talleres semanales con nuestra comunidad donde compartimos herramientas prácticas, aclaramos mitos sobre nutrición y resistencia a la insulina, y resolvemos dudas reales que surgen durante el proceso.</li>
-            </ul>
-          </div>
-          <div class="about-card">
-            <h3 data-es="Mi enfoque" data-en="My approach">Mi enfoque</h3>
-            <p data-es="La idea no es que comas perfecto. La idea es equilibrar, comer bien y conseguir tu objetivo desde un enfoque amable, práctico y sostenible." data-en="The goal is not to eat perfectly. The goal is to create balance, eat well, and reach your objective through a kind, practical, and sustainable approach.">La idea no es que comas perfecto. La idea es equilibrar, comer bien y conseguir tu objetivo desde un enfoque amable, práctico y sostenible.</p>
-            <p data-es="Cuando entendemos tu metabolismo y tu caso en profundidad, todo empieza a tener más sentido: hay más energía, menos ruido mental alrededor de la comida y resultados que se sienten posibles en la vida real." data-en="When we understand your metabolism and your case in depth, everything starts to make more sense: there is more energy, less mental noise around food, and results that feel possible in real life.">Cuando entendemos tu metabolismo y tu caso en profundidad, todo empieza a tener más sentido: hay más energía, menos ruido mental alrededor de la comida y resultados que se sienten posibles en la vida real.</p>
-            <p style="margin-bottom:0;" data-es="<strong style='color:#ee1f7b;'>Mi misión</strong> es ayudarte a entender cómo funciona tu metabolismo y cómo la insulina influye en tu energía, tu hambre y tu peso. Quiero mostrarte que sí es posible bajar de peso, recuperar salud y regular la insulina sin vivir en conflicto con la comida, incluso si hasta ahora sentías que nada funcionaba para ti." data-en="<strong style='color:#ee1f7b;'>My mission</strong> is to help you understand how your metabolism works and how insulin affects your energy, hunger, and weight. I want to show you that it is possible to lose weight, recover your health, and regulate insulin without living in conflict with food, even if until now you felt that nothing worked for you."><strong style="color:#ee1f7b;">Mi misión</strong> es ayudarte a entender cómo funciona tu metabolismo y cómo la insulina influye en tu energía, tu hambre y tu peso. Quiero mostrarte que sí es posible bajar de peso, recuperar salud y regular la insulina sin vivir en conflicto con la comida, incluso si hasta ahora sentías que nada funcionaba para ti.</p>
+        <div class="hero-card">
+          <div class="profile-wrap">
+            <img class="profile-logo" src="images/logo-frena-tu-insulina.jpeg" alt="Frena tu Insulina" />
+            <div class="profile-photo" aria-label="Foto profesional de Paola"></div>
+            <div class="profile-badge" data-es="Paola Zapater <span style='color:#9CA3AF;'>|</span> Nutricionista" data-en="Paola Zapater <span style='color:#9CA3AF;'>|</span> Nutritionist">Paola Zapater <span style="color:#9CA3AF;">|</span> Nutricionista</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="porque">
-      <div class="container">
-        <h2 class="section-title" data-es="El valor de una asesoría nutricional personalizada" data-en="The value of personalized nutrition guidance">El valor de una asesoría nutricional personalizada</h2>
-        <p class="section-subtitle" data-es="Un acompañamiento diseñado para mujeres con resistencia a la insulina que buscan resultados reales, claridad y una forma más amable de relacionarse con su alimentación." data-en="Support designed for women with insulin resistance who want real results, clarity, and a kinder way to relate to food.">Un acompañamiento diseñado para mujeres con resistencia a la insulina que buscan resultados reales, claridad y una forma más amable de relacionarse con su alimentación.</p>
+    <section class="section alt" id="enfoque">
+      <div class="container" style="max-width:860px;">
+        <div class="about-card">
+          <p style="font-size:1.15rem;color:var(--text);font-weight:700;margin-top:0;" data-es="Hola, soy Paola Zapater, nutricionista." data-en="Hi, I'm Paola Zapater, nutritionist.">Hola, soy Paola Zapater, nutricionista.</p>
 
-        <div class="benefits">
-          <article class="benefit-card">
-            <h3 data-es="Acompañamiento cercano" data-en="Close support">Acompañamiento cercano</h3>
-            <p data-es="Resolvemos dudas, ajustamos el proceso y te acompaño con comunicación clara, cálida y constante." data-en="We solve questions, adjust the process, and support you with clear, warm, and consistent communication.">Resolvemos dudas, ajustamos el proceso y te acompaño con comunicación clara, cálida y constante.</p>
-          </article>
-          <article class="benefit-card">
-            <h3 data-es="Tu caso se analiza a fondo" data-en="Your case is analyzed in depth">Tu caso se analiza a fondo</h3>
-            <p data-es="No trabajamos con soluciones genéricas. Entendemos tu historia, tus síntomas, tu rutina y lo que tu cuerpo necesita hoy." data-en="We do not work with generic solutions. We understand your history, your symptoms, your routine, and what your body needs today.">No trabajamos con soluciones genéricas. Entendemos tu historia, tus síntomas, tu rutina y lo que tu cuerpo necesita hoy.</p>
-          </article>
-          <article class="benefit-card">
-            <h3 data-es="Resultados sostenibles" data-en="Sustainable results">Resultados sostenibles</h3>
-            <p data-es="Buscamos regular la insulina, recuperar energía y facilitar un cambio natural, sostenible y sin peleas constantes con la comida." data-en="We aim to regulate insulin, recover energy, and support a natural, sustainable change without constant struggle around food.">Buscamos regular la insulina, recuperar energía y facilitar un cambio natural, sostenible y sin peleas constantes con la comida.</p>
-          </article>
+          <h3 data-es="Mi enfoque" data-en="My approach">Mi enfoque</h3>
+          <p data-es="Creo profundamente que ninguna mujer debería vivir sintiendo culpa cada vez que come." data-en="I deeply believe that no woman should live feeling guilty every time she eats.">Creo profundamente que ninguna mujer debería vivir sintiendo culpa cada vez que come.</p>
+          <p data-es="Por eso mi forma de trabajar combina nutrición clínica basada en evidencia con coaching nutricional, alimentación consciente y un acompañamiento cercano, tanto individual como grupal." data-en="That's why my way of working combines evidence-based clinical nutrition with nutrition coaching, mindful eating, and close support, both individual and group-based.">Por eso mi forma de trabajar combina nutrición clínica basada en evidencia con coaching nutricional, alimentación consciente y un acompañamiento cercano, tanto individual como grupal.</p>
+          <p data-es="No busco que dependas de mí para siempre." data-en="I don't aim for you to depend on me forever.">No busco que dependas de mí para siempre.</p>
+          <p data-es="Busco que, con el tiempo, seas capaz de tomar decisiones con seguridad, entender las señales de tu cuerpo y mantener tus resultados incluso cuando termine el programa." data-en="I want you to become able, over time, to make confident decisions, understand your body's signals, and maintain your results even after the program ends.">Busco que, con el tiempo, seas capaz de tomar decisiones con seguridad, entender las señales de tu cuerpo y mantener tus resultados incluso cuando termine el programa.</p>
+
+          <h3 data-es="Lo que más valoran mis pacientes" data-en="What my patients value most">Lo que más valoran mis pacientes</h3>
+          <p data-es="Quienes trabajan conmigo suelen decir que, por primera vez, se sintieron realmente escuchadas." data-en="Those who work with me often say that, for the first time, they felt truly heard.">Quienes trabajan conmigo suelen decir que, por primera vez, se sintieron realmente escuchadas.</p>
+          <p data-es="Me esfuerzo por ponerme en el lugar de cada mujer, comprender sus frustraciones, adaptar el tratamiento a su realidad y encontrar soluciones prácticas que funcionen en el día a día." data-en="I strive to put myself in each woman's shoes, understand her frustrations, adapt treatment to her reality, and find practical solutions that work day to day.">Me esfuerzo por ponerme en el lugar de cada mujer, comprender sus frustraciones, adaptar el tratamiento a su realidad y encontrar soluciones prácticas que funcionen en el día a día.</p>
+          <p data-es="Porque la mejor alimentación no es la más perfecta." data-en="Because the best diet isn't the most perfect one.">Porque la mejor alimentación no es la más perfecta.</p>
+          <p data-es="Es la que puedes mantener incluso cuando tienes trabajo, hijos, viajes, reuniones o una semana difícil." data-en="It's the one you can maintain even when you have work, kids, travel, meetings, or a hard week.">Es la que puedes mantener incluso cuando tienes trabajo, hijos, viajes, reuniones o una semana difícil.</p>
+
+          <h3 data-es="Mi mayor satisfacción" data-en="My greatest satisfaction">Mi mayor satisfacción</h3>
+          <p data-es="Más allá de un número en la balanza, lo que más me emociona es ver cómo mis pacientes recuperan la tranquilidad." data-en="Beyond a number on the scale, what excites me most is seeing my patients regain peace of mind.">Más allá de un número en la balanza, lo que más me emociona es ver cómo mis pacientes recuperan la tranquilidad.</p>
+          <p data-es="Que dejen de sentir culpa al comer. Que entiendan cómo funciona su cuerpo. Que mejoren su salud hormonal y metabólica. Y que aprendan tanto durante el proceso que ya no necesiten vivir haciendo dieta para sentirse bien." data-en="That they stop feeling guilty when eating. That they understand how their body works. That they improve their hormonal and metabolic health. And that they learn so much during the process that they no longer need to be on a diet to feel good.">Que dejen de sentir culpa al comer. Que entiendan cómo funciona su cuerpo. Que mejoren su salud hormonal y metabólica. Y que aprendan tanto durante el proceso que ya no necesiten vivir haciendo dieta para sentirse bien.</p>
+
+          <h3 data-es="Mi misión" data-en="My mission">Mi misión</h3>
+          <p data-es="Mi misión es ayudarte a recuperar la confianza en tu cuerpo." data-en="My mission is to help you regain confidence in your body.">Mi misión es ayudarte a recuperar la confianza en tu cuerpo.</p>
+          <p style="margin-bottom:0;" data-es="Quiero que dejes atrás las dietas restrictivas, aprendas a alimentarte con libertad y construyas hábitos que cuiden de tu salud hoy, dentro de un año y durante toda tu vida." data-en="I want you to leave restrictive diets behind, learn to eat with freedom, and build habits that take care of your health today, in a year, and for the rest of your life.">Quiero que dejes atrás las dietas restrictivas, aprendas a alimentarte con libertad y construyas hábitos que cuiden de tu salud hoy, dentro de un año y durante toda tu vida.</p>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section" id="testimonios">
       <div class="container">
-        <h2 class="section-title" data-es="¿Cómo trabajamos juntas?" data-en="How do we work together?">¿Cómo trabajamos juntas?</h2>
-        <p class="section-subtitle" data-es="Un proceso claro y aterrizado a tu realidad, para que entiendas tu cuerpo y avances con seguridad, flexibilidad y dirección." data-en="A clear process grounded in your reality, so you understand your body and move forward with confidence, flexibility, and direction.">Un proceso claro y aterrizado a tu realidad, para que entiendas tu cuerpo y avances con seguridad, flexibilidad y dirección.</p>
-        <div class="process-grid">
+        <h2 class="section-title" data-es="Resultados reales" data-en="Real results">Resultados reales</h2>
+        <p class="section-subtitle" data-es="Historias de mujeres que ya están transformando su relación con la insulina y su energía." data-en="Stories from women who are already transforming their relationship with insulin and their energy.">Historias de mujeres que ya están transformando su relación con la insulina y su energía.</p>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-video">
+              <iframe
+                src="https://www.youtube.com/embed/pBce7ktc290"
+                title="Testimonio Alejandra"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <h3 data-es="De años de frustración y dietas que abandonaba… a revertir su resistencia a la insulina en solo 3 meses." data-en="From years of frustration and diets she couldn't stick to… to reversing her insulin resistance in just 3 months.">De años de frustración y dietas que abandonaba… a revertir su resistencia a la insulina en solo 3 meses.</h3>
+            <p class="testimonial-meta" data-es="Alejandra, 25 años" data-en="Alejandra, 25 years old">Alejandra, 25 años</p>
+            <p class="testimonial-text" data-es="Con hipotiroidismo desde los 15 años y resistencia a la insulina, había probado varios planes nutricionales sin lograr mantenerlos. Hoy disfruta una alimentación que puede sostener a largo plazo y logró revertir su resistencia a la insulina, confirmado por su endocrinóloga." data-en="Living with hypothyroidism since age 15 and insulin resistance, she had tried several nutrition plans without being able to stick to them. Today she enjoys an eating style she can sustain long-term, and she reversed her insulin resistance — confirmed by her endocrinologist.">Con hipotiroidismo desde los 15 años y resistencia a la insulina, había probado varios planes nutricionales sin lograr mantenerlos. Hoy disfruta una alimentación que puede sostener a largo plazo y logró revertir su resistencia a la insulina, confirmado por su endocrinóloga.</p>
+          </article>
+          <!-- Nuevo testimonio: copia este bloque <article class="testimonial-card">...</article> y reemplaza el video y el texto -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="asesoria">
+      <div class="container">
+        <h2 class="section-title" data-es="¿Por qué tantas mujeres consiguen mantener sus resultados?" data-en="Why do so many women manage to maintain their results?">¿Por qué tantas mujeres consiguen mantener sus resultados?</h2>
+        <p class="section-subtitle" data-es="Trabajamos con un enfoque personalizado, estrategias adaptadas a tu realidad y un acompañamiento cercano para que cuidar tu salud se sienta posible, natural y sostenible." data-en="We work with a personalized approach, strategies adapted to your reality, and close support so that taking care of your health feels possible, natural, and sustainable.">Trabajamos con un enfoque personalizado, estrategias adaptadas a tu realidad y un acompañamiento cercano para que cuidar tu salud se sienta posible, natural y sostenible.</p>
+
+        <div class="process-grid cols-3">
           <article class="process-card">
             <div class="process-number">1</div>
-            <h3 data-es="Analizamos tu caso" data-en="We analyze your case">Analizamos tu caso</h3>
-            <p data-es="Revisamos tu historia, síntomas, hábitos y objetivos para entender el panorama completo." data-en="We review your history, symptoms, habits, and goals to understand the full picture.">Revisamos tu historia, síntomas, hábitos y objetivos para entender el panorama completo.</p>
+            <h3 data-es="Un plan diseñado para ti, no una dieta genérica." data-en="A plan designed for you, not a generic diet.">Un plan diseñado para ti, no una dieta genérica.</h3>
+            <p data-es="Cada mujer tiene una historia clínica, horarios, preferencias y desafíos diferentes. Por eso tu plan se adapta a tu vida, no al revés." data-en="Every woman has a different clinical history, schedule, preferences, and challenges. That's why your plan adapts to your life, not the other way around.">Cada mujer tiene una historia clínica, horarios, preferencias y desafíos diferentes. Por eso tu plan se adapta a tu vida, no al revés.</p>
           </article>
           <article class="process-card">
             <div class="process-number">2</div>
-            <h3 data-es="Aplicamos herramientas reales" data-en="We apply real tools">Aplicamos herramientas reales</h3>
-            <p data-es="Construimos estrategias prácticas que sí puedas usar en tu día a día, con ciencia, flexibilidad y sin extremos." data-en="We build practical strategies you can actually use in your daily life, with science, flexibility, and no extremes.">Construimos estrategias prácticas que sí puedas usar en tu día a día, con ciencia, flexibilidad y sin extremos.</p>
+            <h3 data-es="Aprende a controlar tu resistencia a la insulina sin pasar hambre ni vivir restringiéndote." data-en="Learn to control your insulin resistance without going hungry or living restricted.">Aprende a controlar tu resistencia a la insulina sin pasar hambre ni vivir restringiéndote.</h3>
+            <p data-es="Desarrollarás estrategias prácticas para mejorar tu salud metabólica mientras disfrutas de una alimentación que realmente puedas mantener." data-en="You'll develop practical strategies to improve your metabolic health while enjoying an eating style you can actually maintain.">Desarrollarás estrategias prácticas para mejorar tu salud metabólica mientras disfrutas de una alimentación que realmente puedas mantener.</p>
           </article>
           <article class="process-card">
             <div class="process-number">3</div>
-            <h3 data-es="Regulamos la insulina" data-en="We regulate insulin">Regulamos la insulina</h3>
-            <p data-es="Trabajamos para mejorar tu metabolismo, regular la insulina y ayudarte a sentirte con más energía y estabilidad." data-en="We work to improve your metabolism, regulate insulin, and help you feel more energy and stability.">Trabajamos para mejorar tu metabolismo, regular la insulina y ayudarte a sentirte con más energía y estabilidad.</p>
+            <h3 data-es="Entiende tu cuerpo y deja de sentir culpa al comer." data-en="Understand your body and stop feeling guilty when you eat.">Entiende tu cuerpo y deja de sentir culpa al comer.</h3>
+            <p data-es="Aprenderás cómo funciona tu metabolismo para tomar decisiones con confianza, sin depender de dietas para siempre." data-en="You'll learn how your metabolism works so you can make confident decisions, without depending on diets forever.">Aprenderás cómo funciona tu metabolismo para tomar decisiones con confianza, sin depender de dietas para siempre.</p>
           </article>
           <article class="process-card">
             <div class="process-number">4</div>
-            <h3 data-es="Tu cuerpo responde" data-en="Your body responds">Tu cuerpo responde</h3>
-            <p data-es="Cuando entiendes lo que te pasa, el peso puede bajar de forma natural y vuelve la confianza en ti, en tu cuerpo y en tu proceso." data-en="When you understand what is happening, weight can come down naturally and confidence returns in you, your body, and your process.">Cuando entiendes lo que te pasa, el peso puede bajar de forma natural y vuelve la confianza en ti, en tu cuerpo y en tu proceso.</p>
+            <h3 data-es="Nunca tendrás que hacerlo sola." data-en="You'll never have to do it alone.">Nunca tendrás que hacerlo sola.</h3>
+            <p data-es="Durante todo el proceso contarás con acompañamiento cercano, empatía y respaldo científico para resolver dudas y seguir avanzando con seguridad." data-en="Throughout the process you'll have close support, empathy, and scientific backing to resolve doubts and keep moving forward with confidence.">Durante todo el proceso contarás con acompañamiento cercano, empatía y respaldo científico para resolver dudas y seguir avanzando con seguridad.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">5</div>
+            <h3 data-es="Aprende junto a mujeres que están viviendo el mismo proceso que tú." data-en="Learn alongside women going through the same process as you.">Aprende junto a mujeres que están viviendo el mismo proceso que tú.</h3>
+            <p data-es="Cada semana resolveremos dudas reales, derribaremos mitos y compartiremos herramientas prácticas para que cada cambio sea sostenible." data-en="Every week we'll answer real questions, debunk myths, and share practical tools so every change is sustainable.">Cada semana resolveremos dudas reales, derribaremos mitos y compartiremos herramientas prácticas para que cada cambio sea sostenible.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">6</div>
+            <h3 data-es="Hábitos que podrás mantener durante toda la vida." data-en="Habits you can maintain for life.">Hábitos que podrás mantener durante toda la vida.</h3>
+            <p data-es="No buscamos cambios temporales. Construiremos una forma de alimentarte que funcione incluso en vacaciones, reuniones, cumpleaños o semanas con mucho trabajo." data-en="We're not after temporary changes. We'll build a way of eating that works even during vacations, gatherings, birthdays, or busy weeks.">No buscamos cambios temporales. Construiremos una forma de alimentarte que funcione incluso en vacaciones, reuniones, cumpleaños o semanas con mucho trabajo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="porque">
+      <div class="container">
+        <h2 class="section-title" data-es="El valor de una asesoría nutricional personalizada" data-en="The value of personalized nutrition guidance">El valor de una asesoría nutricional personalizada</h2>
+        <p class="section-subtitle" data-es="Aquí no encontrarás otra dieta restrictiva. Encontrarás un proceso pensado para ayudarte a entender tu cuerpo, recuperar tu salud metabólica y construir hábitos que puedas mantener durante toda la vida." data-en="Here you won't find another restrictive diet. You'll find a process designed to help you understand your body, recover your metabolic health, and build habits you can maintain for life.">Aquí no encontrarás otra dieta restrictiva. Encontrarás un proceso pensado para ayudarte a entender tu cuerpo, recuperar tu salud metabólica y construir hábitos que puedas mantener durante toda la vida.</p>
+
+        <div class="benefits">
+          <article class="benefit-card">
+            <h3 data-es="Nunca tendrás que hacerlo sola." data-en="You'll never have to do it alone.">Nunca tendrás que hacerlo sola.</h3>
+            <p data-es="Te acompaño durante todo el proceso para resolver tus dudas, adaptar el plan cuando sea necesario y ayudarte a seguir avanzando, incluso en los momentos más difíciles." data-en="I'll be with you throughout the process to answer your questions, adjust the plan when needed, and help you keep moving forward, even in the hardest moments.">Te acompaño durante todo el proceso para resolver tus dudas, adaptar el plan cuando sea necesario y ayudarte a seguir avanzando, incluso en los momentos más difíciles.</p>
+          </article>
+          <article class="benefit-card">
+            <h3 data-es="Tu historia importa." data-en="Your story matters.">Tu historia importa.</h3>
+            <p data-es="No trabajamos con soluciones genéricas. Analizamos tus síntomas, antecedentes, análisis, rutina y objetivos para crear un plan que realmente tenga sentido para ti." data-en="We don't work with generic solutions. We analyze your symptoms, history, lab results, routine, and goals to create a plan that truly makes sense for you.">No trabajamos con soluciones genéricas. Analizamos tus síntomas, antecedentes, análisis, rutina y objetivos para crear un plan que realmente tenga sentido para ti.</p>
+          </article>
+          <article class="benefit-card">
+            <h3 data-es="Aprende a cuidarte sin vivir a dieta." data-en="Learn to take care of yourself without living on a diet.">Aprende a cuidarte sin vivir a dieta.</h3>
+            <p data-es="Nuestro objetivo no es solo mejorar tus análisis o ayudarte a perder grasa. Queremos que entiendas tu cuerpo, dejes atrás la culpa y desarrolles hábitos que puedas mantener para siempre." data-en="Our goal isn't just to improve your lab results or help you lose fat. We want you to understand your body, leave guilt behind, and build habits you can maintain forever.">Nuestro objetivo no es solo mejorar tus análisis o ayudarte a perder grasa. Queremos que entiendas tu cuerpo, dejes atrás la culpa y desarrolles hábitos que puedas mantener para siempre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-es="¿Cómo trabajaremos juntas para mejorar tu resistencia a la insulina?" data-en="How will we work together to improve your insulin resistance?">¿Cómo trabajaremos juntas para mejorar tu resistencia a la insulina?</h2>
+        <p class="section-subtitle" data-es="Un proceso claro, personalizado y basado en evidencia para ayudarte a regular tu resistencia a la insulina, entender tu cuerpo y construir hábitos que puedas mantener para toda la vida." data-en="A clear, personalized, evidence-based process to help you regulate your insulin resistance, understand your body, and build habits you can maintain for life.">Un proceso claro, personalizado y basado en evidencia para ayudarte a regular tu resistencia a la insulina, entender tu cuerpo y construir hábitos que puedas mantener para toda la vida.</p>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-number">1</div>
+            <h3 data-es="Conocemos tu historia" data-en="We get to know your story">Conocemos tu historia</h3>
+            <p data-es="Analizamos tus síntomas, antecedentes, análisis, hábitos y objetivos para entender qué está influyendo en tu resistencia a la insulina y cómo ayudarte de forma personalizada." data-en="We analyze your symptoms, history, lab results, habits, and goals to understand what's influencing your insulin resistance and how to help you in a personalized way.">Analizamos tus síntomas, antecedentes, análisis, hábitos y objetivos para entender qué está influyendo en tu resistencia a la insulina y cómo ayudarte de forma personalizada.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">2</div>
+            <h3 data-es="Creamos estrategias que sí funcionan en la vida real" data-en="We create strategies that actually work in real life">Creamos estrategias que sí funcionan en la vida real</h3>
+            <p data-es="Diseñamos herramientas prácticas adaptadas a tu rutina para que puedas mejorar tu alimentación sin sentir que tu vida gira alrededor de una dieta." data-en="We design practical tools adapted to your routine so you can improve your eating without feeling like your life revolves around a diet.">Diseñamos herramientas prácticas adaptadas a tu rutina para que puedas mejorar tu alimentación sin sentir que tu vida gira alrededor de una dieta.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">3</div>
+            <h3 data-es="Mejoramos tu salud metabólica" data-en="We improve your metabolic health">Mejoramos tu salud metabólica</h3>
+            <p data-es="Trabajamos para regular la resistencia a la insulina, mejorar tu energía, favorecer la pérdida de grasa y recuperar el equilibrio de tu metabolismo." data-en="We work to regulate insulin resistance, improve your energy, support fat loss, and restore balance to your metabolism.">Trabajamos para regular la resistencia a la insulina, mejorar tu energía, favorecer la pérdida de grasa y recuperar el equilibrio de tu metabolismo.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-number">4</div>
+            <h3 data-es="Aprendes a cuidarte para toda la vida" data-en="You learn to take care of yourself for life">Aprendes a cuidarte para toda la vida</h3>
+            <p data-es="Con el tiempo dejarás de depender de dietas porque entenderás cómo funciona tu cuerpo y tomarás decisiones con más confianza, libertad y tranquilidad." data-en="Over time you'll stop depending on diets because you'll understand how your body works and make decisions with more confidence, freedom, and peace of mind.">Con el tiempo dejarás de depender de dietas porque entenderás cómo funciona tu cuerpo y tomarás decisiones con más confianza, libertad y tranquilidad.</p>
           </article>
         </div>
       </div>
@@ -970,11 +1061,14 @@
     <section class="section callout-section">
       <div class="container">
         <div class="callout">
-          <div class="callout-kicker" data-es="VITÁLICA NUTRICIÓN" data-en="VITÁLICA NUTRITION">VITÁLICA NUTRICIÓN</div>
-          <h2 data-es="Tu proceso merece un enfoque más amable y más consciente" data-en="Your process deserves a kinder and more mindful approach">Tu proceso merece un enfoque más amable y más consciente</h2>
-          <p data-es="Si estás lidiando con resistencia a la insulina, no necesitas otra solución rígida o imposible de sostener. Necesitas estrategia, ciencia y flexibilidad. Mi objetivo es ayudarte a mejorar tu salud y bajar de peso sin vivir en conflicto con la comida, con decisiones que sí funcionan en tu vida real." data-en="If you are dealing with insulin resistance, you do not need another rigid or impossible solution to sustain. You need strategy, science, and flexibility. My goal is to help you improve your health and lose weight without living in conflict with food, with decisions that actually work in your real life.">Si estás lidiando con resistencia a la insulina, no necesitas otra solución rígida o imposible de sostener. Necesitas estrategia, ciencia y flexibilidad. Mi objetivo es ayudarte a mejorar tu salud y bajar de peso sin vivir en conflicto con la comida, con decisiones que sí funcionan en tu vida real.</p>
-          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y coordinamos tu evaluación !" data-en="Message me \"I WANT MY CALL\" and we'll schedule your session !">Escríbeme "QUIERO MI CITA" y coordinamos tu evaluación !</p>
-          <a class="btn btn-instagram" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Contáctame para poder ayudarte" data-en="Contact me so I can help you">Contáctame para poder ayudarte</a>
+          <div class="callout-kicker" style="margin-bottom:18px;">
+            <img src="images/logo-frena-tu-insulina.jpeg" alt="Frena tu Insulina" style="height:40px;width:auto;margin:0 auto;" />
+          </div>
+          <h2 data-es="Si tienes resistencia a la insulina, no necesitas otra dieta." data-en="If you have insulin resistance, you don't need another diet.">Si tienes resistencia a la insulina, no necesitas otra dieta.</h2>
+          <p data-es="Necesitas comprender qué está pasando en tu cuerpo y aprender una forma de alimentarte que puedas mantener incluso cuando termine este programa. Mi objetivo es ayudarte a mejorar tu salud metabólica, recuperar energía y construir hábitos que te acompañen durante toda la vida." data-en="You need to understand what's happening in your body and learn a way of eating you can maintain even after this program ends. My goal is to help you improve your metabolic health, recover your energy, and build habits that stay with you for life.">Necesitas comprender qué está pasando en tu cuerpo y aprender una forma de alimentarte que puedas mantener incluso cuando termine este programa. Mi objetivo es ayudarte a mejorar tu salud metabólica, recuperar energía y construir hábitos que te acompañen durante toda la vida.</p>
+          <p style="font-family:var(--serif);font-size:1.15rem;color:var(--pink-strong);max-width:620px;margin:0 auto 24px;line-height:1.6;" data-es="Mi objetivo no es que dependas de mí. Es que aprendas tanto durante el proceso que puedas cuidar tu salud durante toda la vida." data-en="My goal isn't for you to depend on me. It's for you to learn so much during the process that you can take care of your health for the rest of your life.">Mi objetivo no es que dependas de mí. Es que aprendas tanto durante el proceso que puedas cuidar tu salud durante toda la vida.</p>
+          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme &quot;QUIERO MI CITA&quot; y coordinamos tu evaluación !" data-en="Message me &quot;I WANT MY CALL&quot; and we'll schedule your session !">Escríbeme "QUIERO MI CITA" y coordinamos tu evaluación !</p>
+          <a class="btn btn-instagram" href="https://wa.me/51987758451?text=Hola%21%20Quiero%20una%20cita%2C%20he%20visto%20el%20video" target="_blank" rel="noopener" data-es="Contáctame para poder ayudarte" data-en="Contact me so I can help you">Contáctame para poder ayudarte</a>
         </div>
       </div>
     </section>
@@ -984,15 +1078,14 @@
     <div class="container">
       <div class="footer-panel">
         <div class="footer-brand">
-          <img src="images/logo1.jpg" alt="Logo VITÁLICA NUTRICIÓN" />
-          <h3 class="footer-title" data-es="VITÁLICA NUTRICIÓN" data-en="VITÁLICA NUTRITION">VITÁLICA NUTRICIÓN</h3>
+          <img src="images/logo-frena-tu-insulina.jpeg" alt="Logo Frena tu Insulina" />
           <p style="margin:0;color:#a0506a;line-height:1.85;" data-es="Ayudo a mujeres con resistencia a la insulina a recuperar energía, mejorar su salud y sentirse bien en su cuerpo." data-en="I help women with insulin resistance recover energy, improve their health, and feel good in their bodies.">Ayudo a mujeres con resistencia a la insulina a recuperar energía, mejorar su salud y sentirse bien en su cuerpo.</p>
         </div>
 
         <div class="footer-col">
           <h4 data-es="CONTACTO" data-en="CONTACT">CONTACTO</h4>
           <div class="contact-list">
-            <p style="margin:0;">www.vitalicanutricion.com</p>
+            <p style="margin:0;"><a href="mailto:paolazapaterespejo@gmail.com">paolazapaterespejo@gmail.com</a></p>
             <div class="footer-icons">
               <a class="icon-link" href="https://www.instagram.com/vitalicanutricion/" target="_blank" rel="noopener" aria-label="Instagram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1007,12 +1100,12 @@
         <div class="footer-col">
           <h4 data-es="ESCRÍBEME" data-en="WRITE TO ME">ESCRÍBEME</h4>
           <p style="margin-top:0;" data-es="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque cercano y estratégico para que cuidar tu salud se vuelva sostenible." data-en="<strong style='color:var(--pink-strong);letter-spacing:0.03em;'>REAL FOOD · ENJOYMENT · SCIENCE</strong>. A close and strategic approach so caring for your health becomes sustainable."><strong style="color:var(--pink-strong);letter-spacing:0.03em;">COMIDA REAL · DISFRUTE · CIENCIA</strong>. Un enfoque cercano y estratégico para que cuidar tu salud se vuelva sostenible.</p>
-          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme \"QUIERO MI CITA\" y agendamos contigo !" data-en="Message me \"I WANT MY CALL\" and we'll book it !">Escríbeme "QUIERO MI CITA" y agendamos contigo !</p>
-          <a class="btn btn-primary" style="color:#ffffff;" href="https://ig.me/m/vitalicanutricion" target="_blank" rel="noopener" data-es="Agenda tu cita gratis" data-en="Book a free intro call">Agenda tu cita gratis</a>
+          <p style="margin:0 0 10px;font-size:0.95rem;color:var(--muted);" data-es="Escríbeme &quot;QUIERO MI CITA&quot; y agendamos contigo !" data-en="Message me &quot;I WANT MY CALL&quot; and we'll book it !">Escríbeme "QUIERO MI CITA" y agendamos contigo !</p>
+          <a class="btn btn-primary" style="color:#ffffff;" href="https://wa.me/51987758451?text=Hola%21%20Quiero%20una%20cita%2C%20he%20visto%20el%20video" target="_blank" rel="noopener" data-es="Agenda tu cita gratis" data-en="Book a free intro call">Agenda tu cita gratis</a>
         </div>
       </div>
 
-      <div class="copyright">© 2026 VITÁLICA NUTRICIÓN · Paola Zapater | <span data-es="Nutricionista" data-en="Nutritionist">Nutricionista</span></div>
+      <div class="copyright">© 2026 Frena tu Insulina · Paola Zapater | <span data-es="Nutricionista" data-en="Nutritionist">Nutricionista</span></div>
     </div>
   </footer>
 
@@ -1029,7 +1122,7 @@
       toggle.innerHTML = lang === 'es'
         ? '<img src="images/usa.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow:0 6px 14px rgba(0,0,0,0.15);">'
         : '<img src="images/peru.png" style="width:34px;height:34px;border-radius:50%;object-fit:cover; box-shadow:0 6px 14px rgba(0,0,0,0.15);">';
-      document.title = lang === 'es' ? 'VITÁLICA NUTRICIÓN | Paola Zapater' : 'VITÁLICA NUTRITION | Paola Zapater';
+      document.title = 'Frena tu Insulina | Paola Zapater';
     }
 
     toggle.addEventListener('click', () => {
