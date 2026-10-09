@@ -436,25 +436,26 @@
     }
 
     .process-card {
-      background: rgba(255,255,255,0.86);
+      background: linear-gradient(180deg, var(--blush) 0%, rgba(255,255,255,0.94) 55%);
       border-radius: 26px;
       padding: 24px;
-      border: 1px solid rgba(216,195,165,0.22);
+      border: 1px solid rgba(238,31,123,0.13);
       box-shadow: var(--shadow-soft);
     }
 
     .process-number {
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(238,31,123,0.10);
-      color: var(--pink-strong);
+      background: linear-gradient(135deg, var(--pink-strong), var(--pink-soft));
+      color: var(--white);
       font-weight: 700;
       margin-bottom: 14px;
       font-family: var(--serif);
+      box-shadow: 0 6px 14px rgba(238,31,123,0.25);
     }
 
     .process-card h3 {
@@ -688,7 +689,8 @@
       }
 
       .benefits,
-      .process-grid {
+      .process-grid,
+      .process-grid.cols-3 {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -804,8 +806,17 @@
       }
 
       .benefits,
-      .process-grid {
+      .process-grid,
+      .process-grid.cols-3 {
         grid-template-columns: 1fr;
+      }
+
+      .process-card {
+        padding: 20px;
+      }
+
+      .process-card p {
+        line-height: 1.7;
       }
 
       .section {
